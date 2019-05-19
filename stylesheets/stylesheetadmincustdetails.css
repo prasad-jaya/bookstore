@@ -1,0 +1,51 @@
+body {
+		background-image: url("../images/123.jpg");
+		background-size:100%;
+		background-repeat: no-repeat;
+}
+
+.butt{	
+		padding: 5px 10px;
+		font-size:16px;
+		color: white;
+		border-radius:4px;
+		background-color: #662400; 
+		border: 2px solid #white;
+		cursor: pointer;
+		margin-left: 1%;
+}
+
+.topnav{
+		margin-left: 350px;
+}
+
+.topnav a {
+        float: left;
+        color: black;
+        text-align: center;
+ 	    padding: 15px 18px;
+ 	    text-decoration: none;
+  	    font-size: 20px;
+}
+
+.topnav a:hover {
+ 	     background-color: #ffccb3;
+ 	     color: black;
+}
+
+.topnav a.active {
+        background-color: #ffaa80;
+        color: white;
+}
+		   
+.cusdetails{
+		position: absolute;
+		margin-left: 17%;
+		margin-top: 7%;
+		text-color: black;
+}
+
+thead{
+		color: black;
+		font-size:17px;
+}

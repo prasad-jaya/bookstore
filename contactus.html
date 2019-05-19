@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CONTACT US</title>
+<link rel="shortcut icon" href="images/cento books.png" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel ="stylesheet" type="text/css" href="stylesheets/stylesheetcontactus.css">
+</head>
+
+
+
+        <div id="temp_container">
+		<div id="temp_menu">
+    	<ul>
+            <li><a href="D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\home.html" >HOME</a></li>
+            <li><a href="D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\store.html">STORE</a></li>
+            <li><a href="D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\mywatchlist.html">WATCH LIST</a></li>            
+            <li><a href="D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\category.html">CATEGORIES</a></li>  
+            <li><a href="D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\userprof.html">PROFILE</a></li> 
+            <li><a href="D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\About_us.html">ABOUT</a></li>
+			<li><a href="D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\contactus.html"class="current">CONTACT US</a></li>
+   
+			<li><a href = "D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\login.html"> Log In</a></li>
+			<li><a href = "D:\Study Materials\Year 01\Semester 02\Assignments\IWT ASSIGNMENT\HTML Pages\Registration Page.html"> Sign Up</a></li>
+		</ul>
+	   </div> 
+</div>
+
+
+
+<body>
+
+	  <h1>CONTACT US<br/>
+	  
+	  <a href ="homepage">
+<img src ="images/cento books.png" width="200px" height="200px"></a></h1>
+
+<script>
+	function msg()
+	{
+	alert("Your message submitted successfully !!!! Thank you for contacting us!!! ");
+	}
+	</script>
+	
+	
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="images/cn1.jpg" width = "100%">
+  
+</div>
+<div class="mySlides fade">
+  
+  <img src="images/cn2.jpg" width = "100%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/cn33.jpg" width="100%" >
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="images/cn44.jpg" width = "100%">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+<h2>STAY CONNECTED WITH US<h2>
+<div class="center">
+
+<input type ="text" placeholder="name" value=""><br/>
+
+<input type="email" placeholder="email" value=""><br/>
+<input type="textarea" placeholder="message" value=""><br/><br/><br/>
+<input type ="Submit" value ="Submit" onclick="msg()">
+</div>
+<br/>
+<br/>
+</form>
+<div class="right">
+<h3>Address</h3><br/>
+<p>Centro Books,<br/>
+   No 24,<br/>
+   Galle RD,<br/>
+   Colombo 6.
+</p>
+
+
+<h3>E-mail</h3><br/>
+<p>www.Centrobooks.lk@gmail.com<br/>
+</p>
+
+<h3>Phone</h3><br/>
+<p>+94 77 54 88 985<br/>
+   +94 81 24 23 260
+</p>
+
+<h3>Fax</h3><br/>
+<p>+94 11 25 53 801<br>
+</p>
+</div>
+<br/>
+<br/>
+
+ 
+   <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=galle%20road%20colombo%206%20&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.emojilib.com"></a></div><style>.mapouter{position:relative;text-align:right;height:300px;width:700px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="social">
+<a href ="https://www.facebook.com/">
+<img src ="images/facebook.png" width="70px" height="70px"></a>
+<a href ="https://www.instgram.com/">
+<img src ="images/insta.png" width="70px" height="70px"></a>
+<a href ="https://www.twitter.com/">
+<img src ="images/twitter.png" width="70px" height="70px"></a>
+<a href ="https://www.whatsapp.com/">
+<img src ="images/3.png" width="75px" height="75px"></a>
+<a href ="https://www.viber.com/">
+<img src ="images/viber.png" width="70px" height="70px"></a>
+</div>
+
+<div id="temp_footer">
+    
+	       <a href="subpage.html">Home</a> | <a href="subpage.html">Search</a> | <a href="subpage.html">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+       </br></br>
+	   <div class="social">
+<a href ="https://www.facebook.com/">
+<img src ="images/facebook.png" width="30px" height="30px"></a>
+<a href ="https://www.instgram.com/">
+<img src ="images/insta.png" width="30px" height="30px"></a>
+<a href ="https://www.twitter.com/">
+<img src ="images/twitter.png" width="30px" height="30px"></a>
+<a href ="https://www.whatsapp.com/">
+<img src ="images/3.png" width="30px" height="30px"></a>
+<a href ="https://www.viber.com/">
+<img src ="images/viber.png" width="30px" height="30px"></a>
+</div>
+
+
+	   
+	   
+	   
+     </div>
+
+
+
+
+
+</body>
+</html>

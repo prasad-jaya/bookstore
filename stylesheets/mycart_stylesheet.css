@@ -1,0 +1,94 @@
+.img2{
+	width:100px;
+	height:auto;
+	border-radius:100px;
+	display: block;
+  	/*margin-left: 1200px;
+  	margin-top:40px;*/
+	text-align:center;
+	overflow:visible;
+	position:relative;
+	}
+	
+	.p1{
+	color: #b32400;
+	font-size:80px;
+	margin-top:-60px;
+	text-align:Center;
+	text-align:center;
+	}
+	
+	body{
+	background-image: url("../images/a36.jpg");
+  	background-repeat:repeat;
+	align:center;
+	background-position: center top;
+	background-attachment: 100%;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	position:relative;
+	}
+	.div{
+	width:800px;
+	height:150px;
+	border:3px solid  #000000;
+	padding:25px;
+	background-color:#cccccc;
+	}
+	
+	.div2{
+	border:3px solid  #000000;
+	background-image: url("../images/BOOK.jpg");
+	background-position:center;
+	background-size:200px;
+	}
+	
+	.itemName{
+	font-size:40px;
+	color: #000000;
+	margin-left:500px;
+	margin-top:-1350px;	
+	overflow:visible;
+	}	
+	
+	.button1{
+	color: #000000;
+	float:right;
+	font-size:15px;
+	border-radius:5px; black;
+	}
+
+	.button2{
+	color: #000000;
+	float: center;
+	}
+	
+	.but{
+	padding: 10px 20px;
+	font-size:16px;
+	color: black;
+	border-radius:4px;
+	background-color: #ffd1b3; 
+	border: 2px solid #ff6600;
+	cursor: pointer;
+	}
+	
+	.but:hover{
+	background-color:#ff9933;
+	}
+	.des{
+	align:center;
+	color: #000000;
+	font-size:20px;
+	}
+	
+	.div3{
+	color: #000000;
+	border:3px solid  #000000;
+	}
+	
+	.div2 p{
+	margin-top:60px;
+	}
+	
+	

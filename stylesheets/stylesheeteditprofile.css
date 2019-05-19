@@ -1,0 +1,133 @@
+.header{
+font-size:50px;
+text-shadow: 2px 2px white;
+margin:left:40;
+background-color:#f4b642 ;
+width:50%;
+text-align:center;
+}
+.div{
+font-size:25px;
+text-align:center;
+margin-left:-35%;
+}
+.div2{
+  width:500px;
+  height:50px;
+  border: 5px solid white;
+  margin:auto;
+  }
+ .button1
+ {
+margin-left:350px;
+	font-size:20px;
+ }
+ body{
+  background-image:url("../images/ass.jpg");
+  background-size: 100%;
+  }
+.Fname{
+	display:block;
+	box-sizing: border-box;
+	margin-bottom:12px;
+	padding:5px;
+	width:30%;
+	height:10%;
+	border:none;
+	outline:none;
+	border-bottom:1px solid black;
+	font-weight:500;
+	font-size:20px;
+	background-color:white;
+	text-align:left;
+	margin-left:30%;
+}
+
+	.scb{
+ 		background-color: #ffd1b3  ;
+ 		border: outset;
+ 		color: black;
+ 		text-align: center;
+ 		text-decoration: none;
+ 		display: inline-block;
+ 		font-size: 20px;
+  		cursor: pointer;
+  		transition-duration: 0.4s;
+		width:180px;
+		}
+	
+	.scb:hover{
+		background-color:#ff9933 ;
+		}
+		
+		.headerlogo img{
+	position : absolute;
+	width : 150px;
+	height : auto;
+	margin-top : 20px;
+	margin-left : -600px;
+	float : left;
+}
+
+
+header{
+	width : 90%;
+	margin-left : 70px;
+	text-align : center;
+}
+
+#temp_container{
+	width: 1507px;
+	margin: auto;
+	padding: 30px;
+	background-color:#ff471a;
+}
+
+#temp_menu {
+	clear: both;
+	width: 100%;
+	height: 60px;
+}
+
+#temp_menu ul {
+	padding: 13px 0 0 0;
+	margin: 0;
+	list-style: none;
+}
+
+#temp_menu ul li{
+	display: inline;
+}
+
+#temp_menu ul li a{
+	float: left;
+	padding:  10px 15px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family : Lato;
+	text-transform : uppercase;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+#temp_menu li a:hover, #temp_menu li .current{
+	color: #fcf88e;
+}
+
+
+#temp_footer {
+	clear: both;
+	width: 1507px;
+	height: 100px;
+	padding: 100px 0px 20px 0;
+	text-align: center;
+	border-top: 1px solid #25211e;
+	color: #999;
+	background-color:#ff471a;
+}
+
+#temp_footer a{
+	color: white;
+	font-weight: normal;
+}

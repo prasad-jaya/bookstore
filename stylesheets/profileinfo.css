@@ -1,0 +1,84 @@
+.header{
+font-size:70px;
+text-shadow: 2px 5px black;
+text-align:left;
+color:white;
+background-image:url("../images/zz.jpg");
+background-size:100%;
+width:100%;
+height:420px;
+
+
+}
+
+body{
+	background-image: url("../images/a37.jpg");
+  	background-repeat:repeat;
+	align:center;
+	background-position: center top;
+	background-attachment: 100%;
+	background-size: 100% 100%;
+	background-attachment: relative;
+	position:relative;
+	}
+
+
+.div{
+font-size:20px;
+text-align:center;
+position:absolute;
+margin-left:20%;
+margin-top:4.5%;
+}
+.Ndiv{
+font-size:20px;
+text-align:center;
+position:absolute;
+margin-left:55%;
+margin-top:4.7%;
+}
+.div2{
+  width:300px;
+  height:50px;
+  border: 5px solid white;
+  margin:auto;
+  background-color:#e5dfd5;
+  }
+  .div5{
+  width:300px;
+  height:100px;
+  border: 5px solid white;
+  margin:auto;
+  background-color:#e5dfd5;
+  }
+ .button1
+ {	background-color:white;
+	float:right;
+	font-size:20px;
+ }
+ body{
+  background-size:100%;
+  text-weight:500;
+  }
+  .div3{
+	text-align:center;
+	background-color:#a2a2a2;
+	width:300px;
+	hieght:30px;
+  }
+    .div4{
+	text-align:center;
+	background-color:#a2a2a2;
+	width:300px;
+	hieght:100px;
+  }
+	.pa{
+	color:black;
+	font-weight:500;
+	background-color:#333333;
+c
+	font-size:30px;
+	width:300px;
+	background-color:white;
+
+	}

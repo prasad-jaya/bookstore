@@ -1,0 +1,147 @@
+body{
+	/* background-image:url("../images/dd.jpg"); */
+	background-size: 100%;
+	text-align:center;
+	}
+	
+	.header{
+	font-size:80px;
+	text-shadow: 2px 4px black;
+	text-align:center;
+	color:white;
+	weight:500;
+	}
+	
+	.MainDiv{
+	width:90%;
+	height:150PX;
+	border:5px solid  #000000;
+	padding:25px;
+	text-align:center;
+	}
+	
+	.title{
+	font-size:40px;
+	/*margin-top:-10px;*/
+	
+	}
+	
+	.pad{
+	height:90%;
+	width:8%;
+	border:5px solid  #000000;
+	float:left;
+	margin-left:10px;
+	background-image:url("../images/BOOK.jpg");
+	background-size:100%;
+	}
+	.padNew{
+	height:90%;
+	width:8%;
+	border:5px solid  #000000;
+	float:left;
+	margin-left:10px;
+
+	}
+	
+	.pad:hover{
+	background-color:red;
+	cursor: pointer;
+  	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;
+	width:10%;
+	height:180px;
+	color:white;
+	}
+	.top{
+	width:100%;
+	height:500px;
+	background-image:url("../images/book5.jpg");
+	background-size:100%;
+	}
+	.cat{
+	width:50%
+	height:30%;
+	background-color:grey;
+	border-radius:10 px 10px 10px 10px;
+	}
+	
+	.headerlogo img{
+	position : absolute;
+	width : 150px;
+	height : auto;
+	margin-top : 20px;
+	margin-left : -600px;
+	float : left;
+}
+
+
+header{
+	width : 90%;
+	margin-left : 70px;
+	text-align : center;
+}
+
+#temp_container{
+	width: 1507px;
+	margin: auto;
+	padding: 30px;
+	background-color:#ff471a;
+	margin-top: -25px;
+}
+
+#temp_menu {
+	clear: both;
+	width: 100%;
+	height: 60px;
+}
+
+#temp_menu ul {
+	padding: 13px 0 0 0;
+	margin: 0;
+	list-style: none;
+}
+
+#temp_menu ul li{
+	display: inline;
+}
+
+#temp_menu ul li a{
+	float: left;
+	padding:  10px 15px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family : Lato;
+	text-transform : uppercase;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+#temp_menu li a:hover, #temp_menu li .current{
+	color: #fcf88e;
+}
+
+
+#temp_footer {
+	clear: both;
+	width: 1507px;
+	height: 100px;
+	padding: 100px 0px 20px 0;
+	text-align: center;
+	border-top: 1px solid #25211e;
+	color: #999;
+	background-color:#ff471a;
+}
+
+#temp_footer a{
+	color: white;
+	font-weight: normal;
+}
+
+.card2{
+	
+	margin-left: 5px;
+	margin-bottom: 10px;
+	border: #000000;
+}
