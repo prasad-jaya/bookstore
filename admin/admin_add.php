@@ -24,9 +24,10 @@ session_start();
 include_once '../includes/dbconnect.php';
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     if (isset($_SESSION['name'])){
-        $username=$_SESSION['name'];
+        $username=$_SESSION['name'];//Get the User ID From SESSION
     }
 ?>
+<!-- Sub NavBar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -51,7 +52,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 </div>
 <body>
 
-
+<!-- Form Start -->
 <div class="container">  
 <form action="admin_add.php" method="POST" enctype="multipart/form-data">
     <h3 >Add New Items</h3>
@@ -84,7 +85,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     <button type="submit" value="Upload Image" class="btn btn-primary" name="submit">Add</button>
     </form>
 </div> 
-<?php } 
+<?php }
+
 else{
     print '<h1 style="text-align:center;margin-top:10%; class="display-4">Please log in first to see this page.</h1>';
 }
@@ -94,6 +96,7 @@ else{
 </html>
 
 <?php
+/* Image Upload */
 if(isset($_POST["submit"])) {
 $target_dir = "../img/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -128,7 +131,7 @@ if ($uploadOk == 0) {
 }
 
    include_once '..\includes\dbconnect.php';
-   
+   /* Insert Data into Database */
    if(isset($_POST['book_name'])){
 
     $BOOK_NAME = $_POST['book_name'];

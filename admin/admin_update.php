@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheethome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript">
+
+    /* Send Ajax request to delete the entry */
     jQuery(document).ready(function () {
         $(".delete_book").click(function() {
             var book_id = $(this).attr("id");
@@ -105,7 +107,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 <?php 
    include_once '..\includes\dbconnect.php';
-
+/* IF book_id or book_name  */
    if(isset($_POST['book_id'])){
 
         $B_NAME = $_POST['book_name'];
@@ -145,6 +147,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         </table>';
             print $result_form;
     }
+    /* If data feilds and not set */
     else{
         $sql = "SELECT * FROM books_details;";
         $result = mysqli_query($conn,$sql);
