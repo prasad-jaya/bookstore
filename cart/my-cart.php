@@ -45,7 +45,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     <?php
     include_once '..\includes\dbconnect.php';
     $status = 'PENDING';
-    $sqll = "SELECT item_id FROM cart WHERE status ='$status';";
+    $userid = $_SESSION['username'];
+    $sqll = "SELECT item_id FROM cart WHERE status ='$status' AND user_id='$userid';"; //Get the cart from Logged User
     $result = mysqli_query($conn,$sqll);
     $resultCheck = mysqli_num_rows($result);
     $no=0;
@@ -60,15 +61,18 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
             
             if($resultCheck2 > 0) {
+                $price = 0;
+                $itms = 0;
                 while ($row = mysqli_fetch_assoc($result2)){
-                    $img = '../img/bo.png';
+                    $img = '../img/';
                     $id = $row['book_id'];
                     $name = $row['book_name'];
                     $price = $row['price'];
-
+                    $image = $row['image_src'];
+                    $no++;
                     $result_card = '<div class="col-md-3"style="margin-right: 0px;">
                     <div class="card" style="width: 15rem;margin: 10px;">
-                    <img class="card-img-top" src="'.$img.'" alt="Card image cap">
+                    <img class="card-img-top" src="'.$img.$image.'" alt="Card image cap">
                     <div class="card-body">
                     <h5 class="card-title">'.$name.'</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card s content.</p>
@@ -81,7 +85,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 print $result_card;
                 
                 }
-                $no++;
+                $no += $itms;
                 $totprice += $price;
                 
             } 

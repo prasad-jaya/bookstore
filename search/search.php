@@ -81,14 +81,14 @@
                     </div>
 </form>
 </div>
-
+<div class="container" style="margin-top: 2%;">
 <div style="display:flex;margin-top: 2%;">
     <?php
         include_once '..\includes\dbconnect.php';
 
         if(isset($_POST['book_name'])){
         $book_name = $_POST['book_name'].'%';
-        $img = '../img/bo.png';
+        $img = '../img/';
         $Hello = $book_name.'%';
 
             $sql = "SELECT * FROM books_details WHERE book_name LIKE '$book_name';";
@@ -100,15 +100,18 @@
                     $id = $row['book_id'];
                     $name = $row['book_name'];
                     $price = $row['price'];
+                    $image = $row['image_src'];
 
-                    $result_card = '<div class="col-md-3">
-                    <div class="card card2" style="width: 18rem;">
-                    <img class="card-img-top" src="'.$img.'" alt="Card image cap">
+                    $result_card = '<div class="col-md-3" style="width: 450px;">
+                    <div class="card card2 style="width:18rem; display:table">
+                    <img class="card-img-top" src="'.$img.$image.'" alt="Card image cap" style="height: 233px; width: 100%;">
                     <div class="card-body">
                       <h5 class="card-title">'.$name.'</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card s content.</p>
-                      <a type="button" href="search-process.php?id='.$id.'" class="btn btn-primary">Add to Cart</a>
-                      <a type="button" href="../payment/payment.php?items=1&total='.$price.'" class="btn btn-success">Buy Now </a>
+                      <div class="row">
+                      <a type="button" href="search-process.php?id='.$id.'" class="btn btn-primary col-6">Add to Cart</a>
+                      <a type="button" href="../payment/payment.php?items=1&total='.$price.'" class="btn btn-success col-6">Buy Now </a>
+                      </div>
                     </div>
                   </div>
                   </div>';
@@ -121,7 +124,7 @@
         
         }else{
 
-        $img = '../img/bo.png';
+        $img = '../img/';
 
 		$sql = "SELECT * FROM books_details;";
 		$result = mysqli_query($conn,$sql);
@@ -132,15 +135,18 @@
 				$id = $row['book_id'];
 				$name = $row['book_name'];
 				$price = $row['price'];
+                $image = $row['image_src'];
 
-				$result_card = '<div class="col-md-3">
-				<div class="card card2 style="width: 10rem; display:table">
-				<img class="card-img-top" src="'.$img.'" alt="Card image cap">
+				$result_card = '<div class="col-md-3" style="width: 450px;">
+				<div class="card card2 style="width:18rem; display:table">
+				<img class="card-img-top" src="'.$img.$image.'" alt="Card image cap" style="height: 233px; width: 100%;">
 				<div class="card-body">
 				  <h5 class="card-title">'.$name.'</h5>
-				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card s content.</p>
-				  <a type="button" href="search-process.php?id='.$id.'" class="btn btn-primary">Add to Cart</a>
-				  <a type="button" href="../payment/payment.php?items=1&total='.$price.'" class="btn btn-success">Buy Now </a>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card s content.</p>
+                  <div class="row">
+				  <a type="button" href="search-process.php?id='.$id.'" class="btn btn-primary col-6">Add to Cart</a>
+                  <a type="button" href="../payment/payment.php?items=1&total='.$price.'" class="btn btn-success col-6">Buy Now </a>
+                  </div>
 				</div>
               </div>
               </div>';
@@ -153,7 +159,7 @@
 
 ?>
 </div>
-
+</div>
 
 </body>
 </html>

@@ -1,4 +1,7 @@
-<?php 
+<?php
+session_start();
+$userid = $_SESSION['username'];
+
 include_once '..\includes\dbconnect.php';
 if(isset($_GET['id'])){
     $book_id = $_GET['id'];
@@ -17,10 +20,12 @@ if(isset($_GET['id'])){
         }
     }
     echo $id;
-    $sql = "Insert into cart (item_id,status) values('$id','PENDING');"; //user id needs to add
+    $sql = "Insert into cart (item_id,status,user_id) values('$id','PENDING','$userid');"; //user id needs to add
     $result = mysqli_query($conn,$sql); 
     header("Refresh:0; url=search.php");
-    echo "<script type='text/javascript'>alert('Success');</script>";
+    echo "<script type='text/javascript'>alert('Successfully Added To Cart');</script>";
+    //echo $sql;
     
 }
+
 ?>

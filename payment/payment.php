@@ -1,7 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+<?php
+session_start();
+include_once '../includes/dbconnect.php';
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    if (isset($_SESSION['name'])){
+        $username=$_SESSION['name'];
+    }
+?>
 <?php 
 
 if(isset($_GET['items'])){
@@ -49,3 +59,8 @@ if(isset($_GET['items'])){
             </div>
         </div>
 </div>
+<?php } 
+else{
+    print '<h1 style="text-align:center;margin-top:10%; class="display-4">Please log in first to see this page.</h1>';
+}
+?> 

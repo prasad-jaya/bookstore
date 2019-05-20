@@ -94,8 +94,11 @@ session_start();
         if($resultCheck > 0) {
              while ($row = mysqli_fetch_assoc($result)){
                 $id = $row['user_id'];
+                $name = $row['name'];
+                echo $name;
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $id;
+                $_SESSION['name'] = $name;
                 setcookie("myCookie", $id, time() + 3600, "/php/"); 
                 header("Refresh:0; url=../index.html");
                

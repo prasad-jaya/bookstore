@@ -1,4 +1,7 @@
 <?php 
+session_start();
+$userid = $_SESSION['username'];
+
 include_once '..\includes\dbconnect.php';
 if(isset($_GET['items'])){
     $items = $_GET['items'];
@@ -11,11 +14,10 @@ if(isset($_GET['items'])){
        
         $date = date("Y/m/d");
         echo $date;
-        $userid = '001';
-
         $sql = "INSERT into payment (user_id,amount,no_of_items,date) values('$userid',$total,$items,'$date');";
         $result = mysqli_query($conn,$sql);
-        echo $sql;  
+        echo $sql; 
+        header("Refresh:0; url=shipping.php"); 
 
 
 }

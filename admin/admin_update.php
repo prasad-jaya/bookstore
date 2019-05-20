@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Update Items</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheethome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript">
     jQuery(document).ready(function () {
@@ -13,7 +14,7 @@
             var book_id = $(this).attr("id");
             //alert(book_id);
             $.ajax({
-                url : "/onlinebookstore/admin/ajax-delete.php?book_id=" + book_id,
+                url : "ajax-delete.php?book_id=" + book_id,
                 success : function() {
                     $("#book-" + book_id).hide();
                 }
@@ -23,10 +24,56 @@
     
     </script>
 </head>
+
+<div id="temp_container">
+		<div id="temp_menu">
+    	<ul>
+            <li><a href="/bookstore" class="current">HOME</a></li>    
+            <li><a href="../includes/user_edit_profile.php">PROFILE</a></li>
+			<li><a href = "../includes/user_login.php"> Log In</a></li>
+            <li><a href = "../includes/logout.php"> Log Out</a></li>
+		</ul>
+	   </div> 
+</div>
+
+<div>
+<?php
+session_start();
+include_once '../includes/dbconnect.php';
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    if (isset($_SESSION['name'])){
+        $username=$_SESSION['name'];
+    }
+?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="admin_add.php">Add Books <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="admin_update.php">Update Items</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="admin-payment.php">Payment</a>
+      </li>
+    </ul>
+    <span class="navbar-text active">
+    <p style="text-align: center;">Welcome to Admin Panel <?php echo $username ?></p> 
+    </span>
+  </div>
+</nav>
+</div>
+
 <body>
+
+
 <div class="container"> 
-<form action="admin_update.php" method="POST" class="form-inline">
-  <label class="sr-only" for="inlineFormInput">Name</label>
+
+<!--   <label class="sr-only" for="inlineFormInput">Name</label>
   <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" name="book_id" placeholder="Book ID">
 
   <label class="sr-only" for="inlineFormInputGroup">Username</label>
@@ -35,9 +82,26 @@
     <input type="text" class="form-control" id="inlineFormInputGroup" name="book_name" placeholder="Book Name">
   </div>
 
-
   <button type="submit" class="btn btn-primary">Search</button>
-</form>
+</form> -->
+
+<div style="margin-top:50px">
+
+<div style="margin:50px 0 50px 0"> 
+<form action="admin_update.php" method="POST" class="form-inline ">
+
+<div class="form-group row" style="margin-bottom:50px"></div>
+  <div class="col-4">
+  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" name="book_id" placeholder="Book ID">
+  </div>
+  <label for="example-date-input" class="col-1 col-form-label" style="text-align:center">OR</label>
+  <div class="col-4">
+  <input type="text" class="form-control" id="inlineFormInputGroup" name="book_name" placeholder="Book Name">
+  </div>
+  <button type="submit" class="btn btn-secondary col-3 ">Search</button>
+  </form>
+</div>
+
 
 <?php 
    include_once '..\includes\dbconnect.php';
@@ -52,7 +116,7 @@
         $resultCheck = mysqli_num_rows($result);
     
         $result_form = '   
-        <table class="table">
+        <table class="table" >
         <thead>
             <tr>
             <th scope="col">#</th>
@@ -112,7 +176,7 @@
                 <td>'.$ID.'</td>
                 <td>'.$NAME.'</td>
                 <td>'.$PRICE.'</td>
-                <td> <a type="button" href="admin_edit.php?book_id='.$ID.'">View</a> | <a id="'.$ID.'" class="delete_book" type="button">Delete</a> </td> 
+                <td> <a class="btn btn-info" type="button" href="admin_edit.php?book_id='.$ID.'">View</a> | <a id="'.$ID.'" class="delete_book btn btn-danger" type="button">Delete</a> </td> 
                 </tr>';
             }
         }
@@ -124,7 +188,12 @@
 ?>
     
 </div>
-   
+
+<?php } 
+else{
+    print '<h1 style="text-align:center;margin-top:10%; class="display-4">Please log in first to see this page.</h1>';
+}
+?>  
 
 </body>
 </html>
